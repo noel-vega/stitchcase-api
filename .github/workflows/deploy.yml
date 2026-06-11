@@ -23,7 +23,8 @@ jobs:
         run: dotnet publish ./api/api.csproj -c Release -o ./publish
 
       - name: Add Procfile
-        run: echo "web: dotnet api.dll" > ./publish/Procfile
+        run: |
+          echo "web: dotnet api.dll" > ./publish/Procfile
 
       - name: Create deployment package
         run: cd publish && zip -r ../deploy.zip . && cd ..
