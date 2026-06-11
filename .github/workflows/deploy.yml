@@ -46,5 +46,5 @@ jobs:
           aws-region: us-east-1
           application-name: stitchcase-api 
           environment-name: stitchcase-api-env 
-          deployment-package: deploy.zip
+          deployment-package-path: deploy.zip
           version-label: ${{ github.sha }}
